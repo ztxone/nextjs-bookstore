@@ -1,17 +1,17 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 export interface ModalStoreInterface {
-  movieId?: string;
+  bookId?: string;
   isOpen: boolean;
-  openModal: (movieId: string) => void;
+  openModal: (bookId: string) => void;
   closeModal: () => void;
 }
 
 const useInfoModalStore = create<ModalStoreInterface>((set) => ({
-  movieId: undefined,
+  bookId: undefined,
   isOpen: false,
-  openModal: (movieId: string) => set({ isOpen: true, movieId }),
-  closeModal: () => set({ isOpen: false, movieId: undefined }),
+  openModal: (bookId: string) => set({ isOpen: true, bookId }),
+  closeModal: () => set({ isOpen: false, bookId: undefined }),
 }));
 
 export default useInfoModalStore;
