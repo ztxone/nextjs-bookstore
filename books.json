@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Visual Studio Code: End-to-End Editing and Debugging Tools for Web Developers",
+    "author": "Bruce Johnson",
+    "year": 2019,
+    "ISBN": "978-1-119-58818-4",
+    "description": "In a surprisingly short period of time, Visual Studio Code has become very popular among web developers. Part of that is because it’s fast, lightweight, and is available on the three main platforms (Windows, Mac, Linux). But it also boasts several features that set it apart from the competition. This includes support for IntelliSense, refactoring capabilities, and an extensive ecosystem of extensions. But even beyond the features that help developers craft code, there is also debugging support. It’s possible to open a .NET Core project from within Visual Studio Code and get end-to-end execution and debugging functionality.",
+    "thumbnailUrl": "public/books/programming/Bruce_Johnson_Visual_Studio_Code_End_To_End_Editing_and_Debugging-1_pages-to-jpg-0001.jpg",
+    "fileUrl": "public/books/programming/Bruce_Johnson_Visual_Studio_Code_End_To_End_Editing_and_Debugging.pdf",
+    "pages": 176,
+    "category": "Programming",
+    "language": "en"
+  },
+  {
+    "title": "CHATGPT PROMPTS - MASTERING A Complete Guide to Mastering Effective Prompts",
+    "author": "Christian Brown",
+    "year": 2023,
+    "ISBN": "",
+    "description": "This thorough tutorial will teach you everything you need to know about creating concise and effective ChatGPT prompts that spark interesting and educational conversations.",
+    "thumbnailUrl": "public/books/programming/ChatGPT.Prompts.Mastering-1_pages-to-jpg-0001.jpg",
+    "fileUrl": "public/books/programming/ChatGPT.Prompts.Mastering.pdf",
+    "pages": 85,
+    "category": "Programming",
+    "language": "en"
+  }
+]
