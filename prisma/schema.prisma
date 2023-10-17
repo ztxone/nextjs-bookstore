@@ -61,7 +61,7 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
-model Book {
+model Movie {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String
   description String
