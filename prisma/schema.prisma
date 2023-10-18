@@ -65,12 +65,12 @@ model Book {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   title String
   author String
-  year Integer
+  year Int
   ISBN String
   description String
   thumbnailUrl String
   fileUrl String
-  pages String
+  pages Int
   category String
   language String
 }
