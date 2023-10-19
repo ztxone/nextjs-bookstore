@@ -9,6 +9,7 @@ import InfoModal from "@/components/InfoModal";
 import useBookList from "@/hooks/useBookList";
 import useFavorites from "@/hooks/useFavorites";
 import useInfoModalStore from "@/hooks/useInfoModalStore";
+import Contacts from "@/components/Contacts";
 
 export async function getServerSideProps(context: NextPageContext) {
   const session = await getSession(context);
@@ -36,11 +37,12 @@ const Home = () => {
     <>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <Billboard />
-      <div className="pb-40">
-        <BookList title="Trending Now" data={books} />
+      {/* <Billboard /> */}
+      <div className="py-20">
+        <BookList title="Last books" data={books} />
         <BookList title="My List" data={favorites} />
       </div>
+      <Contacts />
     </>
   );
 };

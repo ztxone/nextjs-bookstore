@@ -21,11 +21,12 @@ const BookCard: React.FC<BookCardProps> = ({ data }) => {
   );
 
   return (
-    <div className="group bg-zinc-900 col-span relative h-[12vw]">
+    <div className="group bg-zinc-900 col-span relative h-[30vw]">
       <img
         onClick={redirectToWatch}
         src={data.thumbnailUrl}
         alt="Book"
+        loading="lazy"
         draggable={false}
         className="
         cursor-pointer
@@ -38,14 +39,14 @@ const BookCard: React.FC<BookCardProps> = ({ data }) => {
         sm:group-hover:opacity-0
         delay-300
         w-full
-        h-[12vw]
+        h-[30vw]
       "
       />
       <div
         className="
         opacity-0
         absolute
-        top-0
+        top-20
         transition
         duration-200
         z-10
@@ -104,13 +105,15 @@ const BookCard: React.FC<BookCardProps> = ({ data }) => {
               <ChevronDownIcon className="text-white group-hover/item:text-neutral-300 w-4 lg:w-6" />
             </div>
           </div>
-          <p className="text-green-400 font-semibold mt-4">
-            New <span className="text-white">2023</span>
-          </p>
-          <div className="flex flex-row mt-4 gap-2 items-center">
-            <p className="text-white text-[10px] lg:text-sm">{data.pages}</p>
+          <div className="text-green-400 font-semibold mt-4">
+            Year <span className="text-white">2023</span>
           </div>
-          <div className="flex flex-row items-center gap-2 mt-4 text-[8px] text-white lg:text-sm">
+          <div className="flex flex-row mt-2 gap-2 items-center">
+            <p className="text-white text-[10px] lg:text-sm">
+              Pages: {data.pages}
+            </p>
+          </div>
+          <div className="flex flex-row items-center gap-2 mt-2 text-[8px] text-white lg:text-sm">
             <p>{data.category}</p>
           </div>
         </div>
