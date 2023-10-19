@@ -1,6 +1,6 @@
 import React from "react";
 
-const Contacts: React.FC<P> = () => {
+const Contacts: React.FC<{}> = () => {
   return (
     <div className="px-4 md:px-12 py-4 space-y-8">
       <div>
