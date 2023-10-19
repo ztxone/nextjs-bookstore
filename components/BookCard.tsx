@@ -26,7 +26,6 @@ const BookCard: React.FC<BookCardProps> = ({ data }) => {
         onClick={redirectToWatch}
         src={data.thumbnailUrl}
         alt="Book"
-        loading="lazy"
         draggable={false}
         className="
         cursor-pointer
