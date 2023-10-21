@@ -61,8 +61,12 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
 
           <div className="px-12 py-8">
             <div className="flex flex-row items-center gap-2 mb-8">
-              <p className="text-green-400 font-semibold text-lg">New</p>
-              <p className="text-white text-lg">Pages: {data?.pages},</p>
+              <p className="text-green-400 font-semibold text-lg">
+                {data?.year.toString()}
+              </p>
+              <p className="text-white text-lg">
+                Pages: {data?.pages.toString()},
+              </p>
               <p className="text-white text-lg">{data?.category}</p>
             </div>
             <p className="text-white text-lg">{data?.description}</p>

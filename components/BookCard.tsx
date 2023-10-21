@@ -93,11 +93,11 @@ const BookCard: React.FC<BookCardProps> = ({ data }) => {
             </div>
           </div>
           <div className="text-green-400 font-semibold mt-4">
-            Year <span className="text-white">2023</span>
+            Year <span className="text-white">{data?.year.toString()}</span>
           </div>
           <div className="flex flex-row mt-2 gap-2 items-center">
             <p className="text-white text-[10px] lg:text-sm">
-              Pages: {data.pages}
+              Pages: {data?.pages.toString()}
             </p>
           </div>
           <div className="flex flex-row items-center gap-2 mt-2 text-[8px] text-white lg:text-sm">
