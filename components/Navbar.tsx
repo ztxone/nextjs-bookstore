@@ -52,15 +52,16 @@ const Navbar = () => {
           src="/images/logo.png"
           className="h-4 lg:h-7"
           alt="BookStore Jamk"
+          title="BookStore Jamk"
         />
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
-          <NavbarItem label="Home" active />
-          {/* <NavbarItem label="Series" />
-          <NavbarItem label="Films" /> */}
+          {/*<NavbarItem label="Home" active />
           <NavbarItem label="Books" />
+          <NavbarItem label="Series" />
+          <NavbarItem label="Films" /> 
           <NavbarItem label="New & Popular" />
           <NavbarItem label="My List" />
-          <NavbarItem label="Browse by Languages" />
+          <NavbarItem label="Browse by Languages" />*/}
         </div>
         <div
           onClick={toggleMobileMenu}
