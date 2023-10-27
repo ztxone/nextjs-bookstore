@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { BookInterface } from "@/types";
-import BookCard from "@/components/BookCard";
+import BookCard from "@/components/Books/BookCard";
 import { isEmpty } from "lodash";
 
 interface BookListProps {
@@ -49,7 +49,7 @@ const BookList: React.FC<BookListProps> = ({ data, title }) => {
           }
         >
           {data.map((book) => (
-            <BookCard key={book.id} data={book} />
+            <BookCard key={book.id} data={book} view={view} />
           ))}
         </div>
       </div>
