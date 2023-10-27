@@ -11,7 +11,7 @@ interface BookCardProps {
   data: BookInterface;
 }
 
-const BookCard: React.FC<BookCardProps> = ({ data }) => {
+const BookCard: React.FC<BookCardProps> = ({ data, view }) => {
   const router = useRouter();
   const { openModal } = useInfoModalStore();
 
