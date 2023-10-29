@@ -11,7 +11,7 @@ interface BookCardProps {
   data: BookInterface;
 }
 
-const BookCard: React.FC<BookCardProps> = ({ data, view }) => {
+const BookCard: React.FC<BookCardProps> = ({ data, view, listId }) => {
   const router = useRouter();
   const { openModal } = useInfoModalStore();
 
@@ -19,6 +19,7 @@ const BookCard: React.FC<BookCardProps> = ({ data, view }) => {
     () => router.push(`/watch/${data.id}`),
     [router, data.id]
   );
+  console.log(data);
 
   return (
     <>
@@ -116,10 +117,10 @@ const BookCard: React.FC<BookCardProps> = ({ data, view }) => {
       )}
       {view == "table" && (
         <tr key={data.id} className="text-white">
-          <td>{data.id}</td>
-          <td>{data.title}</td>
-          <td>{data.author}</td>
-          <td>{data.year.toString()}</td>
+          <td className="p-2 border">{listId}</td>
+          <td className="p-2 border">{data.title}</td>
+          <td className="p-2 border">{data.author}</td>
+          <td className="p-2 border">{data.year.toString()}</td>
         </tr>
       )}
     </>
