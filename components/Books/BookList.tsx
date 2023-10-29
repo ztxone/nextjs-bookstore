@@ -44,7 +44,7 @@ const BookList: React.FC<BookListProps> = ({ data, title }) => {
             view === "table"
               ? "table-view"
               : view === "twoColumns"
-              ? "grid grid-cols-2 gap-2"
+              ? "grid"
               : "grid grid-cols-4 gap-2"
           }
         >
