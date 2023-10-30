@@ -1,6 +1,5 @@
 import { NextPageContext } from "next";
 import { getSession } from "next-auth/react";
-import Head from "next/head";
 
 import Navbar from "@/components/Navbar";
 import Contacts from "@/components/Contacts";
@@ -22,21 +21,12 @@ export async function getServerSideProps(context: NextPageContext) {
   };
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Head>
-        <html lang="en" />
-      </Head>
-      <body>
-        <Navbar />
-        <div className="py-20">{children}</div>
-        <Contacts />
-      </body>
+      <Navbar />
+      <div className="py-20 px-4 md:px-12 ">{children}</div>
+      <Contacts />
     </>
   );
 }

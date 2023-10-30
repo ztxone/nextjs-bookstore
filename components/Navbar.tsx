@@ -8,6 +8,7 @@ import {
 import AccountMenu from "@/components/AccountMenu";
 import MobileMenu from "@/components/MobileMenu";
 import NavbarItem from "@/components/NavbarItem";
+import Link from "next/link";
 
 const TOP_OFFSET = 66;
 
@@ -47,22 +48,24 @@ const Navbar = () => {
           showBackground ? "bg-zinc-900 bg-opacity-90" : ""
         }`}
       >
-        <img
-          src="/images/logo.png"
-          className="h-4 lg:h-7"
-          alt="BookStore Jamk"
-          title="BookStore Jamk"
-        />
+        <Link href="/">
+          <img
+            src="/images/logo.png"
+            className="h-4 lg:h-7"
+            alt="BookStore Jamk"
+            title="BookStore Jamk"
+          />
+        </Link>
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
-          {/*<NavbarItem label="Home" active />
-          <NavbarItem label="Books" />
-          <NavbarItem label="Series" />
+          <NavbarItem label="Home" url="/" />
+          <NavbarItem label="Search" url="/search" />
+          {/*<NavbarItem label="Series" />
           <NavbarItem label="Films" /> 
           <NavbarItem label="New & Popular" />
           <NavbarItem label="My List" />
           <NavbarItem label="Browse by Languages" />*/}
         </div>
-        {/* 		
+
         <div
           onClick={toggleMobileMenu}
           className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
@@ -74,7 +77,7 @@ const Navbar = () => {
             }`}
           />
           <MobileMenu visible={showMobileMenu} />
-        </div> */}
+        </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <MagnifyingGlassIcon className="w-6" />
