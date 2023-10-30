@@ -19,7 +19,6 @@ const BookCard: React.FC<BookCardProps> = ({ data, view, listId }) => {
     () => router.push(`/watch/${data.id}`),
     [router, data.id]
   );
-  console.log(data);
 
   return (
     <>

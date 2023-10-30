@@ -53,7 +53,11 @@ const BookList: React.FC<BookListProps> = ({ data, title }) => {
       onClick={() => handleSort(field)}
     >
       {label}{" "}
-      {sortField === field && <span>{sortOrder === "asc" ? "▲" : "▼"}</span>}
+      {sortField === field ? (
+        <span>{sortOrder === "asc" ? "▲" : "▼"}</span>
+      ) : (
+        <span>↕</span>
+      )}
     </th>
   );
 
