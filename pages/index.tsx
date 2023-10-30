@@ -4,7 +4,7 @@ import { getSession } from "next-auth/react";
 
 import Navbar from "@/components/Navbar";
 import Billboard from "@/components/Billboard";
-import BookList from "@/components/BookList";
+import BookList from "@/components/Books/BookList";
 import InfoModal from "@/components/InfoModal";
 import useBookList from "@/hooks/useBookList";
 import useFavorites from "@/hooks/useFavorites";
@@ -39,8 +39,8 @@ const Home = () => {
       <Navbar />
       {/* <Billboard /> */}
       <div className="py-20">
-        <BookList title="Last books" data={books} />
-        <BookList title="My List" data={favorites} />
+        <BookList title="Last books" data={books} type="list" />
+        <BookList title="My List" data={favorites} type="fav" />
       </div>
       <Contacts />
     </>
