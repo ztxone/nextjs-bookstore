@@ -5,6 +5,7 @@ import { PlayIcon } from "@heroicons/react/24/solid";
 
 import { BookInterface } from "@/types";
 import FavoriteButton from "@/components/FavoriteButton";
+import InfoModal from "@/components/InfoModal";
 import useInfoModalStore from "@/hooks/useInfoModalStore";
 
 interface BookCardProps {
@@ -13,7 +14,7 @@ interface BookCardProps {
 
 const BookCard: React.FC<BookCardProps> = ({ data, view, listId }) => {
   const router = useRouter();
-  const { openModal } = useInfoModalStore();
+  const { isOpen, closeModal, openModal } = useInfoModalStore();
 
   const redirectToWatch = useCallback(
     () => router.push(`/watch/${data.id}`),
@@ -86,6 +87,7 @@ const BookCard: React.FC<BookCardProps> = ({ data, view, listId }) => {
   );
   return (
     <>
+      <InfoModal visible={isOpen} onClose={closeModal} />
       {view === "grid" && (
         <div className="group bg-zinc-900 col-span relative h-auto">
           <img
