@@ -62,6 +62,7 @@ const Navbar = () => {
           <NavbarItem label="My List" />
           <NavbarItem label="Browse by Languages" />*/}
         </div>
+        {/* 		
         <div
           onClick={toggleMobileMenu}
           className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
@@ -73,7 +74,7 @@ const Navbar = () => {
             }`}
           />
           <MobileMenu visible={showMobileMenu} />
-        </div>
+        </div> */}
         <div className="flex flex-row ml-auto gap-7 items-center">
           <div className="text-gray-200 hover:text-gray-300 cursor-pointer transition">
             <MagnifyingGlassIcon className="w-6" />

@@ -10,7 +10,7 @@ interface BookListProps {
 }
 
 const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
-  const [view, setView] = useState<"grid" | "table" | "twoColumns">("grid");
+  const [view, setView] = useState<"grid" | "table" | "columns">("grid");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
   const [sortField, setSortField] = useState<keyof BookInterface | null>(null);
 
@@ -19,7 +19,7 @@ const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
   }
 
   const switchViews = (selectedView: string): void => {
-    setView(selectedView as "grid" | "table" | "twoColumns");
+    setView(selectedView as "grid" | "table" | "columns");
   };
 
   const handleSort = (field: keyof BookInterface) => {
@@ -80,20 +80,20 @@ const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
             >
               <option value="grid">Grid</option>
               <option value="table">Table</option>
-              <option value="twoColumns">Two Columns</option>
+              <option value="columns">Columns</option>
             </select>
           </div>
         </>
       )}
 
       {view === "grid" && (
-        <div className="grid grid-cols-2 gap-4 ">
+        <div className="grid gap-2 grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {data.map((book) => (
             <BookCard key={book.id} data={book} view={view} />
           ))}
         </div>
       )}
-      {view === "twoColumns" && (
+      {view === "columns" && (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {data.map((book) => (
             <BookCard key={book.id} data={book} view={view} />
@@ -101,8 +101,8 @@ const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
         </div>
       )}
       {view === "table" && (
-        <div className="table-view">
-          <table className="min-w-full border border-gray-300">
+        <div className="table-view overflow-x-auto w-full">
+          <table className="min-w-full table-auto min-w-[450px] border border-gray-300">
             <thead>
               <tr>
                 <SortableHeader label="ID" field="id" />

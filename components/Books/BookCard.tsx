@@ -87,7 +87,7 @@ const BookCard: React.FC<BookCardProps> = ({ data, view, listId }) => {
   return (
     <>
       {view === "grid" && (
-        <div className="group bg-zinc-900 col-span relative h-[30vw]">
+        <div className="group bg-zinc-900 col-span relative h-auto">
           <img
             onClick={redirectToWatch}
             src={data.thumbnailUrl}
@@ -104,13 +104,13 @@ const BookCard: React.FC<BookCardProps> = ({ data, view, listId }) => {
 				group-hover:opacity-30
 				delay-300
 				w-full
-				h-[30vw]
+				h-auto
 			"
           />
           <BookModal />
         </div>
       )}
-      {view == "twoColumns" && (
+      {view == "columns" && (
         <div className="group col-span relative ">
           <a onClick={redirectToWatch} className="text-white cursor-pointer">
             {data.title}
