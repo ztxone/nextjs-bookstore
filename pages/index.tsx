@@ -39,8 +39,8 @@ const Home = () => {
       <Navbar />
       {/* <Billboard /> */}
       <div className="py-20">
-        <BookList title="Last books" data={books} />
-        <BookList title="My List" data={favorites} />
+        <BookList title="Last books" data={books} type="list" />
+        <BookList title="My List" data={favorites} type="fav" />
       </div>
       <Contacts />
     </>
