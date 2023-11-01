@@ -5,8 +5,11 @@ const SearchPage: React.FC = () => {
   const { data: books = [] } = useBookList();
 
   const pdfUrls = books.map((book) => book.fileUrl);
-  console.log(pdfUrls);
-  return <MultiPDFSearch pdfUrls={pdfUrls} />;
+
+  //console.log("==>pdfUrls=",pdfUrls);
+  //console.log("==>books=",books);
+
+  return <MultiPDFSearch books={books} />;
 };
 
 export default SearchPage;
