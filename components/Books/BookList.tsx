@@ -103,7 +103,7 @@ const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
       )}
       {view === "table" && (
         <div className="table-view overflow-x-auto w-full bg-slate-500">
-          <table className="min-w-full table-auto min-w-[450px] border border-gray-300">
+          <table className="table-auto min-w-[450px] border border-gray-300">
             <thead>
               <tr>
                 <SortableHeader label="ID" field="id" />
