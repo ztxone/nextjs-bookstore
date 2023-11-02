@@ -50,7 +50,7 @@ const Navbar = () => {
       >
         <Link href="/">
           <img
-            src="/images/logo.png"
+            src="/images/logo2.png"
             className="h-4 lg:h-7"
             alt="BookStore Jamk"
             title="BookStore Jamk"

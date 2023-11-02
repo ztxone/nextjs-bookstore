@@ -23,10 +23,10 @@ export async function getServerSideProps(context: NextPageContext) {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div className="relative h-full w-full bg-[url('/images/auth_bg.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <Navbar />
       <div className="py-20 px-4 md:px-12 ">{children}</div>
       <Contacts />
-    </>
+    </div>
   );
 }
