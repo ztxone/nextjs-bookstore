@@ -11,7 +11,7 @@ const MultiPDFSearch: React.FC<MultiPDFSearchProps> = ({ pdfUrls = [] }) => {
   const [searchResults, setSearchResults] = useState<
     Map<string, boolean | null>
   >(new Map());
-
+  
   const handleSearch = (pdfUrl: string) => {
     const updatedResults = new Map(searchResults);
 
@@ -26,7 +26,7 @@ const MultiPDFSearch: React.FC<MultiPDFSearchProps> = ({ pdfUrls = [] }) => {
       setSearchResults(new Map(updatedResults));
     }
   };
-
+  
   return (
     <div>
       <h1>Multi-PDF Search</h1>
