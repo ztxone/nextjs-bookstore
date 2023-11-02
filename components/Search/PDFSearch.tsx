@@ -3,7 +3,8 @@ import PDFSearch from "./PDFSearch";
 import pdfjs from "pdfjs-dist";
 
 interface MultiPDFSearchProps {
-  pdfUrls?: string[]; // Add "?" to make it optional
+  pdfUrls?: string[];
+  pdfUrl?: string; // Add "?" to make it optional
 }
 
 const MultiPDFSearch: React.FC<MultiPDFSearchProps> = ({ pdfUrls = [] }) => {

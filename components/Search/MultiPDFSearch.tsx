@@ -1,18 +1,20 @@
+import { BookInterface } from "@/types"
 import React, { useState } from "react";
 
 interface MultiPDFSearchProps {
-  books: [];
+  books: BookInterface[];
+  pdfUrls?: string[];
 }
 
 const MultiPDFSearch: React.FC<MultiPDFSearchProps> = ({ books }) => {
   const [searchTerm, setSearchTerm] = useState<string>("");
-  const [foundBooks, setFoundBooks] = useState<string[]>([]);
+  const [foundBooks, setFoundBooks] = useState<BookInterface[]>([]);
 
   const handleSearch = () => {
     // Perform your search logic here and find all matching book titles
     // For simplicity, I'm using a placeholder value based on the search term
 
-    const matchingBooks = books.filter((book) =>
+    const matchingBooks: BookInterface[] = books?.filter((book) =>
       book.title.toLowerCase().includes(searchTerm.toLowerCase()) 
       || book.author.toLowerCase().includes(searchTerm.toLowerCase())
       || book.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -20,9 +22,9 @@ const MultiPDFSearch: React.FC<MultiPDFSearchProps> = ({ books }) => {
       || book.year.toString().includes(searchTerm.trim())
     );
 
-    const uniqueBooks = [...new Map(matchingBooks.map(item =>[item['title'], item])).values()];
+    // const uniqueBooks: BookInterface[] = [...new Map(matchingBooks?.map(item =>[item['title'], item])).values()];
 
-    setFoundBooks(uniqueBooks);
+    setFoundBooks(matchingBooks);
   };
 
   return (

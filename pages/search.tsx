@@ -10,7 +10,7 @@ const SearchPage: React.FC = () => {
   //console.log(pdfUrls);
   return (
     <Layout>
-      <MultiPDFSearch pdfUrls={pdfUrls} />
+      <MultiPDFSearch pdfUrls={pdfUrls} books={books} />
     </Layout>
   );
 };
