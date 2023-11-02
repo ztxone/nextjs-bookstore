@@ -7,6 +7,7 @@ import { isEmpty } from "lodash";
 interface BookListProps {
   data: BookInterface[];
   title: string;
+  type: string;
 }
 
 const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
@@ -49,7 +50,7 @@ const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
     field: keyof BookInterface;
   }> = ({ label, field }) => (
     <th
-      className="p-2 border cursor-pointer whitespace-nowrap"
+      className="p-2 border cursor-pointer whitespace-nowrap text-white"
       onClick={() => handleSort(field)}
     >
       {label}{" "}
@@ -101,7 +102,7 @@ const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
         </div>
       )}
       {view === "table" && (
-        <div className="table-view overflow-x-auto w-full">
+        <div className="table-view overflow-x-auto w-full bg-slate-500">
           <table className="min-w-full table-auto min-w-[450px] border border-gray-300">
             <thead>
               <tr>
