@@ -7,6 +7,7 @@ import { isEmpty } from "lodash";
 interface BookListProps {
   data: BookInterface[];
   title: string;
+  type: string;
 }
 
 const BookList: React.FC<BookListProps> = ({ data, title, type }) => {
